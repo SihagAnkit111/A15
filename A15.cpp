@@ -163,4 +163,22 @@ void round_robin_process()
 
 
 }
+int main()
+{
+    printf("Enter max elements for queue 1\n");
+    scanf("%d",&n[0]);
+    printf("Enter priority( 0(max) to 3(min)) ,arrival time and burst time\n");
+    input_data(que1,n[0],0);
+    premain=n[0];
 
+    printf("Enter max elements for queue 2\n");
+    scanf("%d",&n[1]);
+    printf("Enter priority( 3(max) to 6(min)) ,arrival time and burst time\n");
+    input_data(que2,n[1],1);
+    rremain=n[1];
+
+    priority_process();
+    round_robin_process();
+    
+    return 0;
+}
